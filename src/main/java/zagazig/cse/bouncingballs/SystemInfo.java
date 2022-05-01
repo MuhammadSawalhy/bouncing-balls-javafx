@@ -1,4 +1,4 @@
-package com.mycompany.mavenproject1;
+package zagazig.cse.bouncingballs;
 
 public class SystemInfo {
 

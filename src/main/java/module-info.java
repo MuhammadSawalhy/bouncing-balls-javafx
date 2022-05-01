@@ -1,4 +1,4 @@
-module com.mycompany.mavenproject1 {
+module zagazig.cse.boundingballs {
     requires javafx.controls;
-    exports com.mycompany.mavenproject1;
+    exports zagazig.cse.bouncingballs;
 }
