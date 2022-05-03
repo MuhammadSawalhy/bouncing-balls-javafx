@@ -1,4 +1,5 @@
 module zagazig.cse.boundingballs {
-    requires javafx.controls;
+	requires transitive javafx.graphics;
+	requires javafx.controls;
     exports zagazig.cse.bouncingballs;
 }
