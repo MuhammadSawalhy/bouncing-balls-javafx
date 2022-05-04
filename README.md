@@ -5,14 +5,20 @@
 مشروع برمجة مطلوب من الكلية تدريبا على ما تعلمناه من الجافا وال javafx
 
   # أمثلة وإلهامات
-  
+
   1. https://codepen.io/rglazebrook/pen/AMMgVz
   2. https://www.youtube.com/watch?v=x6NFmzQHvMU
   3. https://www.youtube.com/watch?v=YIKRXl3wH8Y
-  
+
 # مخطط الواجهة
 
 ![مخطط الواجهة](./gui-sketch.png)
+
+# مخطط الفئات Classes Diagram
+
+هذا المخطط مصمم ببرنامج [draw.io](https://draw.io)، وملف المشروع هو _./bouncing-balls-class-uml.drawio_.
+
+![مخطط الفئات](./bouncing-balls-class-uml.svg)
 
 # الرخصة
 
