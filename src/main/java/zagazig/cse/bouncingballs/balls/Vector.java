@@ -1,8 +1,8 @@
 package zagazig.cse.bouncingballs.balls;
 
 public class Vector {
-    double x;
-    double y;
+    public double x;
+    public double y;
 
     public Vector(double x, double y) {
         this.x = x;
@@ -41,5 +41,15 @@ public class Vector {
 
     public void scale(double factor) {
         setMagnitude(this.getMagnitude() * factor);
+    }
+
+    public Vector copy() {
+        return new Vector(x, y);
+    }
+
+    public static Vector random(double mag) {
+        var vec = new Vector(Math.random() * 10, Math.random() * 10);
+        vec.setMagnitude(mag);
+        return vec;
     }
 }
