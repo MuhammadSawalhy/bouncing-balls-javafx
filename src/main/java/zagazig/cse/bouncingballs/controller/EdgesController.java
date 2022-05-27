@@ -11,9 +11,9 @@ public class EdgesController extends SubController {
 
     @Override
     public void moveBall(Ball ball) {
-        ball.move(controller.settings.velocityMulitplier);
+        ball.move(controller.settings.speedMulitplier);
         Vector pos = ball.getPosition();
-        double radius = ball.getRadius();
+        double radius = ball.radius;
 
         // TODO: handle collision between the controls box and the ball
 
@@ -30,7 +30,7 @@ public class EdgesController extends SubController {
             ball.velocity.y = -ball.velocity.y;
 
         // top edge of the window
-        if (pos.y - radius > controller.settings.height)
+        if (pos.y - radius < 0)
             ball.velocity.y = -ball.velocity.y;
     }
 }

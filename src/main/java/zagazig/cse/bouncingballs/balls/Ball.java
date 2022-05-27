@@ -4,24 +4,20 @@ import javafx.scene.shape.Circle;
 import zagazig.cse.bouncingballs.Utils;
 
 public class Ball {
-    private double radius;
+    public final double radius;
     private Vector position;
     private Vector initialVelocity;
     public Vector velocity;
     public Vector acceleration;
     public Circle shape;
 
-    public Ball() {
-        velocity = Vector.random(Utils.random(1, 8));
-        velocity.add(new Vector(2, 2)); // to make sure it is moving
+    public Ball(Vector position, double radius) {
+        this.position = position;
+        this.radius = radius;
+        velocity = Vector.random(Utils.random(2, 5));
         acceleration = new Vector(0, 0);
-        radius = Utils.random(10, 30);
-        shape = new Circle(position.x, position.y, radius);
         initialVelocity = velocity.copy();
-    }
-
-    public double getRadius() {
-        return radius;
+        shape = new Circle(position.x, position.y, radius);
     }
 
     /*
@@ -34,12 +30,14 @@ public class Ball {
     public void move() {
         position.add(velocity);
         velocity.add(acceleration);
+        updateShapePosition();
     }
 
     public void move(Vector vec) {
         position.add(vec);
         shape.setCenterX(position.x);
         shape.setCenterY(position.y);
+        updateShapePosition();
     }
 
     public void move(double speedMultiplier) {
@@ -49,9 +47,15 @@ public class Ball {
         newAcceleration.scale(speedMultiplier);
         position.add(newVelocity);
         velocity.add(newAcceleration);
+        updateShapePosition();
     }
 
     public void resetVelocity() {
         velocity.setMagnitude(initialVelocity.getMagnitude());
+    }
+
+    private void updateShapePosition() {
+        shape.setCenterX(position.x);
+        shape.setCenterY(position.y);
     }
 }

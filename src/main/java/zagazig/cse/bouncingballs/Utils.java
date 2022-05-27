@@ -8,7 +8,6 @@ public class Utils {
     }
 
     public static Color randomColor() {
-        // TODO: return dark colors for be suitable to the light background
         Color color = Color.color(Math.random(), Math.random(), Math.random());
         return color.darker();
     }

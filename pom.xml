@@ -29,6 +29,16 @@
                 <configuration>
                     <mainClass>zagazig.cse.bouncingballs.App</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>debug</id>
+                        <configuration>
+                            <options>
+                                <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8000</option>
+                            </options>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

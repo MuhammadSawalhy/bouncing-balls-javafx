@@ -8,14 +8,15 @@ import zagazig.cse.bouncingballs.balls.Ball;
 import zagazig.cse.bouncingballs.balls.BallsGenerator;
 
 public class Controller {
-    AppSettings settings = new AppSettings();
-    List<Ball> balls;
-    List<SubController> subControllers;
+    public final AppSettings settings;
+    public final List<Ball> balls;
+    public final List<SubController> subControllers;
 
-    public Controller() {
+    public Controller(AppSettings settings) {
+        this.settings = settings;
         var edgesController = new EdgesController(this);
         subControllers = Arrays.asList(edgesController);
-        balls = BallsGenerator.generateRandomBalls(10);
+        balls = BallsGenerator.generateRandomBalls(10, settings);
     }
 
     public void moveBalls() {

@@ -5,5 +5,5 @@ public class AppSettings {
     public int height;
     public int controlsWidth;
     public int controlsHeight;
-    public int velocityMulitplier;
+    public int speedMulitplier;
 }

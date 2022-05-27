@@ -1,2 +1,2 @@
-run:
+compile:
 	mvn javafx:run
