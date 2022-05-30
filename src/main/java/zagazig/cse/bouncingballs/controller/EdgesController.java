@@ -18,19 +18,19 @@ public class EdgesController extends SubController {
         // TODO: handle collision between the controls box and the ball
 
         // right edge of the window
-        if (pos.x + radius > controller.settings.width)
+        if (pos.x + radius > controller.settings.width && ball.velocity.x > 0)
             ball.velocity.x = -ball.velocity.x;
 
         // left edge of the window
-        if (pos.x - radius < 0)
+        if (pos.x - radius < 0 && ball.velocity.x < 0)
             ball.velocity.x = -ball.velocity.x;
 
         // bottom edge of the window
-        if (pos.y + radius > controller.settings.height)
+        if (pos.y + radius > controller.settings.height && ball.velocity.y > 0)
             ball.velocity.y = -ball.velocity.y;
 
         // top edge of the window
-        if (pos.y - radius < 0)
+        if (pos.y - radius < 0 && ball.velocity.y < 0)
             ball.velocity.y = -ball.velocity.y;
     }
 }

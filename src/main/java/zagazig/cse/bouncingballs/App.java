@@ -39,9 +39,18 @@ public final class App extends Application {
             }
         }));
 
+        stage.widthProperty().addListener((obs, oldVal, newVal) -> {
+            settings.width = newVal.intValue();
+        });
+
+        stage.heightProperty().addListener((obs, oldVal, newVal) -> {
+            settings.height = newVal.intValue();
+        });
+
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
         stage.setScene(scene);
+        stage.setTitle("Bouncing Balls");
         stage.show();
     }
 
