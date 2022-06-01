@@ -8,7 +8,6 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -57,7 +56,7 @@ public final class App extends Application {
         settingsContainer.layoutXProperty().bind(root.widthProperty().subtract(settingsContainer.widthProperty()));
 
         for (Ball b : controller.balls)
-            root.getChildren().addAll(b.shape);
+            root.getChildren().add(b.shape);
 
         root.getChildren().add(settingsContainer);
 

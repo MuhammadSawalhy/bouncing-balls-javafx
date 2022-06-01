@@ -35,8 +35,6 @@ public class Ball {
 
     public void move(Vector vec) {
         position.add(vec);
-        shape.setCenterX(position.x);
-        shape.setCenterY(position.y);
         updateShapePosition();
     }
 

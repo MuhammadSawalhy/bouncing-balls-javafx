@@ -14,7 +14,7 @@ public class EdgesController extends SubController {
         ball.move(controller.settings.speedMulitplier);
         Vector pos = ball.getPosition();
         double radius = ball.radius;
-
+        
         // TODO: handle collision between the controls box and the ball
 
         // right edge of the window

@@ -3,6 +3,7 @@ package zagazig.cse.bouncingballs;
 import javafx.scene.paint.Color;
 
 public class Utils {
+    
     public static double random(double start, double end) {
         return start + (end - start + 1) * Math.random(); // +1 to include the end
     }
